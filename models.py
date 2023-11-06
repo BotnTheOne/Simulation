@@ -55,7 +55,12 @@ class Predator(Creature):
 
 
 class Map:
-    pass
+    def map_creator(self):
+        horizontal_attrs = ['A', 'B', 'C',
+                            'D', 'E', 'F',
+                            'G', 'H', 'I']
+        map_field = dict(enumerate(horizontal_attrs))
+        return map_field
 
 
 class Simulation:
@@ -86,3 +91,5 @@ if __name__ == '__main__':
     print('Grass: ', vars(z))
     r = Predator()
     print('Predator: ', vars(r))
+    t = Map()
+    print(t.map_creator())
